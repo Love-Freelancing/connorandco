@@ -1,6 +1,6 @@
 'use client'
 
-import { useId } from 'react'
+import { useId, useState } from 'react'
 
 import { Button } from '@/components/Button'
 import { FadeIn } from '@/components/FadeIn'
@@ -56,19 +56,75 @@ function RadioInput({
 }
 
 export function ContactForm() {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [status, setStatus] = useState<
+    | { type: 'idle' }
+    | { type: 'success'; message: string }
+    | { type: 'error'; message: string }
+  >({ type: 'idle' })
+
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    setStatus({ type: 'idle' })
+    setIsSubmitting(true)
+
+    const form = event.currentTarget
+    const formData = new FormData(form)
+    const payload = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      company: formData.get('company'),
+      phone: formData.get('phone'),
+      message: formData.get('message'),
+      budget: formData.get('budget'),
+    }
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      })
+
+      const data = (await response.json()) as { error?: string }
+
+      if (!response.ok) {
+        setStatus({
+          type: 'error',
+          message: data.error || 'Unable to send your inquiry right now.',
+        })
+        return
+      }
+
+      form.reset()
+      setStatus({
+        type: 'success',
+        message: 'Thanks! Your inquiry was sent successfully.',
+      })
+    } catch {
+      setStatus({
+        type: 'error',
+        message: 'Unable to send your inquiry right now.',
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
   return (
     <FadeIn className="lg:order-last">
-      <form>
+      <form onSubmit={handleSubmit}>
         <h2 className="font-display text-base font-semibold text-neutral-950">
           Work inquiries
         </h2>
         <div className="isolate mt-6 -space-y-px rounded-2xl bg-white/50">
-          <TextInput label="Name" name="name" autoComplete="name" />
+          <TextInput label="Name" name="name" autoComplete="name" required />
           <TextInput
             label="Email"
             type="email"
             name="email"
             autoComplete="email"
+            required
           />
           <TextInput
             label="Company (Optional)"
@@ -88,6 +144,7 @@ export function ContactForm() {
           <TextInput
             label="Tell us about your tech stack needs, project goals, or the problems you're trying to solve..."
             name="message"
+            required
           />
           <div className="border border-neutral-300 px-6 py-8 first:rounded-t-2xl last:rounded-b-2xl">
             <fieldset>
@@ -97,6 +154,7 @@ export function ContactForm() {
                   label="Subscription (Monthly / Annual)"
                   name="budget"
                   value="subscription"
+                  required
                 />
                 <RadioInput
                   label="Webflow / Landing Page ($3k - $5k)"
@@ -117,8 +175,18 @@ export function ContactForm() {
             </fieldset>
           </div>
         </div>
-        <Button type="submit" className="mt-10">
-          Send Inquiry
+        {status.type !== 'idle' && (
+          <p
+            className={`mt-6 text-sm ${
+              status.type === 'success' ? 'text-green-700' : 'text-red-700'
+            }`}
+            role="status"
+          >
+            {status.message}
+          </p>
+        )}
+        <Button type="submit" className="mt-10" disabled={isSubmitting}>
+          {isSubmitting ? 'Sending...' : 'Send Inquiry'}
         </Button>
       </form>
     </FadeIn>

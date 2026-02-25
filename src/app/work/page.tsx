@@ -3,7 +3,9 @@ import {
   siFigma,
   siNextdotjs,
   siReact,
+  siSupabase,
   siTailwindcss,
+  siTypescript,
   siVercel,
   siWebflow,
   type SimpleIcon,
@@ -111,6 +113,8 @@ const techStack: Array<{ name: string; icon: SimpleIcon }> = [
   { name: 'Vercel', icon: siVercel },
   { name: 'React', icon: siReact },
   { name: 'Tailwind CSS', icon: siTailwindcss },
+  { name: 'TypeScript', icon: siTypescript },
+  { name: 'Supabase', icon: siSupabase },
 ]
 
 function Clients() {
