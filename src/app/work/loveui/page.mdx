@@ -1,0 +1,61 @@
+import { Logo } from '@/components/Logo'
+import imageHero from './hero.png'
+import imageConnorProfile from './connor.jpg'
+
+export const caseStudy = {
+  client: 'LoveUI',
+  title: 'Building a modern UI component library',
+  description:
+    'LoveUI is a custom development platform providing engineers with high-performance, accessible, and beautifully designed React components.',
+  summary: [
+    'LoveUI was born out of the need for a faster, more reliable way to build beautiful web interfaces without compromising on performance or accessibility.',
+    'We designed the entire system from the ground up in Figma, and engineered the platform using Next.js, Tailwind CSS, and Framer Motion to deliver seamless developer experiences.',
+  ],
+  logo: <Logo className="h-8" />,
+  image: { src: imageHero },
+  date: '2026-01',
+  service: 'Full-stack development',
+  testimonial: {
+    author: { name: 'Connor', role: 'Founder & Lead Developer' },
+    content:
+      'The goal with LoveUI was to bridge the gap between stunning visual design and highly scalable code. It serves as the foundational architecture for many of our most complex client builds.',
+  },
+}
+
+export const metadata = {
+  title: `${caseStudy.client} Case Study`,
+  description: caseStudy.description,
+}
+
+## Overview
+
+Modern web development requires moving fast, but speed often comes at the cost of design quality and accessibility. LoveUI was created to solve this exact problem: providing developers and agencies with a premium toolkit of ready-to-use React components.
+
+The project required a deep understanding of component-driven architecture. We started by designing a comprehensive design system in Figma, establishing strict rules for typography, spacing, and interaction states. 
+
+From there, the platform was engineered using Next.js for lightning-fast server-side rendering and static generation. The components themselves were built using React and Tailwind CSS, ensuring they were highly customizable, responsive, and completely accessible. Advanced animations were integrated using Framer Motion to give the UI a premium, polished feel.
+
+Today, LoveUI stands as a testament to our technical capabilities, showcasing our ability to build complex, scalable web applications that serve real-world development needs.
+
+## What we did
+
+<TagList>
+  <TagListItem>UI/UX Design (Figma)</TagListItem>
+  <TagListItem>Next.js Architecture</TagListItem>
+  <TagListItem>React Component Engineering</TagListItem>
+  <TagListItem>Tailwind CSS Implementation</TagListItem>
+</TagList>
+
+<Blockquote
+  author={{ name: 'Connor', role: 'Founder & Lead Developer' }}
+  image={{ src: imageConnorProfile }}
+>
+  The goal with LoveUI was to bridge the gap between stunning visual design and highly scalable code. It serves as the foundational architecture for many of our most complex client builds.
+</Blockquote>
+
+<StatList>
+  <StatListItem value="100+" label="Custom Components" />
+  <StatListItem value="100" label="Lighthouse Score" />
+  <StatListItem value="<50ms" label="Component Load Time" />
+  <StatListItem value="Fully" label="Accessible (WCAG)" />
+</StatList>

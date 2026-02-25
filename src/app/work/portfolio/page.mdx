@@ -1,0 +1,61 @@
+import { Logo } from '@/components/Logo'
+import imageHero from './hero.png'
+import imageConnorProfile from './connor.jpg'
+
+export const caseStudy = {
+  client: 'Connor Love',
+  title: 'High-performance digital portfolio experience',
+  description:
+    'A custom digital experience built to showcase advanced web animations, responsive design, and lightning-fast load times.',
+  summary: [
+    'For a digital agency, a portfolio is more than just a resume—it is the ultimate proof of capability. We set out to build a digital experience that highlights the intersection of premium design and flawless code.',
+    'Designed from scratch in Figma and engineered for maximum performance, this build serves as a benchmark for the quality, speed, and attention to detail we bring to every client project.',
+  ],
+  logo: <Logo className="h-8" />,
+  image: { src: imageHero },
+  date: '2024-05',
+  service: 'Web design & development',
+  testimonial: {
+    author: { name: 'Connor', role: 'Founder & Lead Developer' },
+    content:
+      'Your personal website is the ultimate playground to push the boundaries of design and code. It sets the exact standard of excellence that we deliver to our clients every single day.',
+  },
+}
+
+export const metadata = {
+  title: `${caseStudy.client} Case Study`,
+  description: caseStudy.description,
+}
+
+## Overview
+
+In the highly competitive web design space, telling a client you can build a great website isn't enough; you have to show them. The goal for **connorlove.com** was to create a digital environment that immediately establishes trust, technical authority, and design proficiency.
+
+The project began in Figma, where we mapped out a highly modern, minimalist user interface. We focused heavily on typography, whitespace, and a grid system that would feel premium and breathable. The design phase also included mapping out complex scroll interactions and micro-animations to keep the user engaged without feeling overwhelmed.
+
+During development, the focus shifted entirely to performance and execution. Heavy, bloated animations were avoided in favor of clean, performant CSS and Javascript transitions that render at a flawless 60 frames per second. The site is fully responsive, ensuring that the premium experience translates perfectly from massive desktop monitors down to mobile devices.
+
+The final result is a lightning-fast, highly interactive portfolio that not only houses our previous work, but stands as a flagship case study of its own.
+
+## What we did
+
+<TagList>
+  <TagListItem>UI/UX Design (Figma)</TagListItem>
+  <TagListItem>Frontend Development</TagListItem>
+  <TagListItem>Advanced Web Animations</TagListItem>
+  <TagListItem>Performance Optimization</TagListItem>
+</TagList>
+
+<Blockquote
+  author={{ name: 'Connor', role: 'Founder & Lead Developer' }}
+  image={{ src: imageConnorProfile }}
+>
+  Your personal website is the ultimate playground to push the boundaries of design and code. It sets the exact standard of excellence that we deliver to our clients every single day.
+</Blockquote>
+
+<StatList>
+  <StatListItem value="100" label="Performance Score" />
+  <StatListItem value="60fps" label="Smooth Animations" />
+  <StatListItem value="<0.5s" label="Initial Page Load" />
+  <StatListItem value="100%" label="Mobile Responsive" />
+</StatList>
