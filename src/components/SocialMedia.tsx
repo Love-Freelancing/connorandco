@@ -40,7 +40,7 @@ function GitHubIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 export const socialMediaProfiles = [
   { title: 'LinkedIn', href: 'https://linkedin.com', icon: LinkedInIcon },
   { title: 'X / Twitter', href: 'https://x.com', icon: XIcon },
-  { title: 'GitHub', href: 'https://github.com', icon: GitHubIcon },
+  { title: 'GitHub', href: 'https://github.com/Love-Freelancing', icon: GitHubIcon },
 ]
 
 export function SocialMedia({

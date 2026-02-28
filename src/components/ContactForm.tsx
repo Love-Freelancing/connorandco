@@ -31,7 +31,7 @@ function TextInput({
       />
       <label
         htmlFor={id}
-        className="pointer-events-none absolute top-1/2 left-6 -mt-3 origin-left text-base/6 text-neutral-500 transition-all duration-200 peer-not-placeholder-shown:-translate-y-4 peer-not-placeholder-shown:scale-75 peer-not-placeholder-shown:font-semibold peer-not-placeholder-shown:text-neutral-950 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-neutral-950"
+        className="pointer-events-none absolute top-1/2 left-6 whitespace-nowrap -mt-3 origin-left text-base/6 text-neutral-500 transition-all duration-200 peer-not-placeholder-shown:-translate-y-4 peer-not-placeholder-shown:scale-75 peer-not-placeholder-shown:font-semibold peer-not-placeholder-shown:text-neutral-950 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-neutral-950"
       >
         {label}
       </label>
@@ -142,7 +142,7 @@ export function ContactForm() {
             }}
           />
           <TextInput
-            label="Tell us about your tech stack needs, project goals, or the problems you're trying to solve..."
+            label="Tell us about your tech stack, goals, or the problem you're solving..."
             name="message"
             required
           />
