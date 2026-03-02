@@ -79,10 +79,10 @@ const projects = [
       </svg>
     ),
   },
-      category: 'React/Next.js',
+  {
     caseStudyHref: '/work/portfolio',
     year: '2024',
-    category: 'Webflow Frontend',
+    category: 'React/Next.js',
     title: 'High-performance digital portfolio experience.',
     description:
       'A custom digital experience built to showcase advanced web animations, responsive design, and lightning-fast load times. Built from scratch to highlight the intersection of design and code.',
