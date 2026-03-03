@@ -4,8 +4,8 @@ import '@/styles/tailwind.css'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - Studio',
-    default: 'Studio - Award winning developer studio based in Denmark',
+    template: '%s | Connor & Co.',
+    default: 'Connor & Co. | Webflow & Next.js Development Studio',
   },
 }
 
