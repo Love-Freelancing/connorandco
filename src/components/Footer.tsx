@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { FooterNewsletterForm } from '@/components/FooterNewsletterForm'
-import { Logo } from '@/components/Logo'
+import { Logomark } from '@/components/Logo'
 import { socialMediaProfiles } from '@/components/SocialMedia'
 
 const navigation = [
@@ -76,11 +76,11 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-24 mb-20 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
-          <Link href="/" aria-label="Home">
-            <Logo className="h-8" fillOnHover />
+          <Link href="/" aria-label="Home" className="group/logo">
+            <Logomark className="h-8 w-8" />
           </Link>
           <p className="text-sm text-neutral-700">
-            © Connor & Co. {new Date().getFullYear()}
+            Connor & Co. {new Date().getFullYear()}
           </p>
         </div>
       </FadeIn>
