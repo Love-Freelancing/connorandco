@@ -1,3 +1,4 @@
+import Script from 'next/script'
 import {
   siFigma,
   siNextdotjs,
@@ -16,7 +17,7 @@ import { List, ListItem } from '@/components/List'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
 import { Testimonial } from '@/components/Testimonial'
-import { createMetadata } from '@/lib/seo'
+import { createHomePageJsonLd, createMetadata, siteConfig } from '@/lib/seo'
 import imageLaptop from '@/images/connorCoding.jpg'
 import { RootLayout } from '@/components/RootLayout'
 
@@ -296,14 +297,33 @@ function Pricing() {
 }
 
 export const metadata = createMetadata({
+  title: siteConfig.defaultTitle,
   description:
-    'Outcome-focused web design and development for agency overflow, startup launches, and conversion-focused redesigns.',
+    'Connor & Co. is a web design and development studio for agency overflow, startup launches, and conversion-focused redesigns built with Webflow and Next.js.',
+  keywords: [
+    'Connor & Co.',
+    'Connor and Co',
+    'Connor',
+    'Connor Love',
+    'Webflow development',
+    'Next.js development',
+    'startup web design',
+    'agency overflow partner',
+  ],
   path: '/',
 })
 
 export default async function Home() {
   return (
     <RootLayout>
+      <Script
+        id="home-structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(createHomePageJsonLd()),
+        }}
+      />
+
       <Container className="mt-24 sm:mt-32 md:mt-56">
         <FadeIn className="max-w-3xl">
           <h1 className="font-display text-5xl font-medium tracking-tight text-balance text-neutral-950 sm:text-7xl">
