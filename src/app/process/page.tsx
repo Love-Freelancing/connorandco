@@ -55,18 +55,16 @@ function Section({
 
 function Discover() {
   return (
-    <Section title="Discover & Design" image={{ src: imageWhiteboard }}>
+    <Section title="Clarify The Outcome" image={{ src: imageWhiteboard }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          Every successful build starts with a solid foundation. We collaborate
-          closely with you to understand your business goals, target audience,
-          and technical requirements.
+          Every project starts by defining the result you need. That may be
+          extra agency delivery support, a faster launch, or better conversion
+          on an important page.
         </p>
         <p>
-          Instead of guessing, we translate those insights into high-fidelity
-          designs and interactive prototypes using Figma. This ensures we are
-          completely aligned on the vision and user experience before a single
-          line of code is written.
+          From there, we turn the plan into clear messaging, page structure,
+          and design direction so the build phase stays focused.
         </p>
       </div>
 
@@ -85,26 +83,23 @@ function Discover() {
 
 function Build() {
   return (
-    <Section title="Build & Develop" image={{ src: imageLaptop, shape: 1 }}>
+    <Section title="Design And Build" image={{ src: imageLaptop, shape: 1 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          Once the designs are approved, we start engineering. For marketing
-          websites, we develop lightning-fast, highly animated builds in
-          Webflow. For custom web apps and startup MVPs, we write clean,
-          scalable code using modern frameworks like Next.js and React.
+          Once the direction is approved, we start the build. That may be a
+          Webflow marketing site, a Next.js MVP frontend, or a focused
+          homepage refresh depending on the scope.
         </p>
         <p>
-          We maintain clear communication throughout the entire build phase.
-          You&apos;ll receive regular updates and live staging links, so you can
-          watch your digital product come to life in real-time—no black boxes
-          or obscured timelines.
+          You get regular updates, live staging links, and direct
+          communication throughout the build. The process stays simple and
+          easy to follow.
         </p>
       </div>
 
       <Blockquote author={{ name: 'Connor', role: 'Founder, Connor & Co.' }} className="mt-12">
-        We operate with complete transparency. You will always know exactly
-        where your project stands, from the first design sprint to the final
-        deployment.
+        The goal is not to sell you technology for its own sake. The goal is
+        to help you launch or improve the right thing.
       </Blockquote>
     </Section>
   )
@@ -112,19 +107,15 @@ function Build() {
 
 function Deliver() {
   return (
-    <Section title="Deliver & Scale" image={{ src: imageMeeting, shape: 2 }}>
+    <Section title="Launch And Keep Momentum" image={{ src: imageMeeting, shape: 2 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          As we approach the finish line, we conduct rigorous QA testing to
-          ensure your site is fast, accessible, and performs beautifully across
-          all devices and browsers.
+          Before launch, we test the site to make sure it is fast, accessible,
+          and reliable across devices and browsers.
         </p>
         <p>
-          We don&apos;t just hand over the keys and disappear. After a successful
-          launch, we provide comprehensive training so your team can confidently
-          manage the platform. From there, you can take full ownership, or
-          transition into one of our dedicated monthly subscriptions for ongoing
-          development and feature rollouts.
+          After launch, you can take full ownership or continue with ongoing
+          support for updates, improvements, and future work.
         </p>
       </div>
 
@@ -173,19 +164,16 @@ function Values() {
       <Container className="mt-24">
         <GridList>
           <GridListItem title="Pixel-Perfect">
-            We sweat the small stuff. From precise Figma design hand-offs to
-            clean, well-documented Next.js code, premium quality is built into
-            every layer.
+            Strong execution matters. Clean UI, thoughtful hierarchy, and
+            polished builds all affect how credible your business feels.
           </GridListItem>
           <GridListItem title="Fast & Focused">
-            By utilizing modern tools like Webflow and React, we drastically
-            reduce development time and deliver world-class products without
-            the traditional agency bloat.
+            The process stays lean so you can get to launch or improvement
+            faster without unnecessary overhead.
           </GridListItem>
           <GridListItem title="Scalable Solutions">
-            We don&apos;t believe in a one-size-fits-all approach. We actively
-            choose the right tech stack for your specific business goals and
-            current stage of growth.
+            The offer stays focused on the result, and the stack follows the
+            job. That keeps the solution aligned with your stage and budget.
           </GridListItem>
           <GridListItem title="Transparent">
             No hidden fees, no obscured timelines, and no technical jargon
@@ -211,18 +199,17 @@ function Values() {
 export const metadata = createMetadata({
   title: 'Our Process',
   description:
-    'We believe in a streamlined, transparent approach to building digital products from design to deployment.',
+    'A streamlined, transparent process for agency overflow work, startup launches, and conversion-focused redesigns.',
   path: '/process',
 })
 
 export default function Process() {
   return (
     <RootLayout>
-      <PageIntro eyebrow="Our process" title="How we work">
+      <PageIntro eyebrow="Our process" title="A process built to reduce buying risk.">
         <p>
-          We believe in a streamlined, transparent approach to building digital
-          products. From the initial wireframe to the final deployment, our
-          process is designed to move fast without sacrificing quality.
+          The process is designed to make scope clear, delivery predictable,
+          and the final result easy to trust.
         </p>
       </PageIntro>
 

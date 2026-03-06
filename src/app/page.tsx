@@ -35,7 +35,7 @@ function Clients() {
       <Container>
         <FadeIn className="flex items-center gap-x-8">
           <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
-            Powered by modern, scalable technology.
+            We use the right tools for the work, not the same process every time.
           </h2>
           <div className="h-px flex-auto bg-neutral-800" />
         </FadeIn>
@@ -165,14 +165,14 @@ function Services() {
   return (
     <>
       <SectionIntro
-        eyebrow="Services"
-        title="Everything you need to build and scale your digital presence."
+        eyebrow="Offers"
+        title="Three clear ways to work together."
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          From designing high-converting landing pages to engineering complex
-          web applications, we provide the technical expertise your business
-          needs to grow.
+          Most clients are not looking for development in the abstract. They
+          need a specific problem solved. These offers are built around the
+          result you need right now.
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -187,26 +187,23 @@ function Services() {
             </FadeIn>
           </div>
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-132 lg:pl-4">
-            <ListItem title="UI/UX & Web Design">
-              Every great build starts with a solid foundation. We design
-              beautiful, intuitive user interfaces and high-fidelity prototypes
-              in Figma before writing a single line of code.
+            <ListItem title="Agency Overflow Offer">
+              White-label Webflow and Next.js production for agencies that need
+              a reliable development partner. You manage the client. We handle
+              the build work.
             </ListItem>
-            <ListItem title="Webflow Development">
-              We build lightning-fast, high-converting marketing websites using
-              Webflow. Perfect for growing businesses that need a premium,
-              easy-to-manage digital storefront.
+            <ListItem title="Startup Launch Offer">
+              Fast design and development for founders who need a credible
+              website or MVP frontend without hiring full-time. Launch sooner
+              with a clear, professional product presence.
             </ListItem>
-            <ListItem title="Custom Web Applications">
-              Need something more complex? We engineer robust, scalable web
-              apps, portals, and startup MVPs using modern frameworks like
-              Next.js and React.
+            <ListItem title="Conversion Refresh Offer">
+              Homepage and landing page redesigns focused on clarity, speed,
+              and conversion. Best for teams with traffic but weak results.
             </ListItem>
-            <ListItem title="Development Subscriptions">
-              Skip the hiring process. We offer dedicated design and
-              development support for a flat monthly rate. Perfect for
-              fast-moving startups and agencies needing a reliable technical
-              partner.
+            <ListItem title="Ongoing Partner Support">
+              After launch, continue with monthly support for updates,
+              improvements, and overflow work.
             </ListItem>
           </List>
         </div>
@@ -217,39 +214,39 @@ function Services() {
 
 const pricingPlans = [
   {
-    name: 'Webflow Sprint',
+    name: 'Agency Overflow Offer',
     price: 'Starting at $3,000',
     description:
-      'High-converting marketing websites and landing pages built to grow your business.',
+      'White-label Webflow and Next.js production for agencies that need dependable execution.',
     features: [
-      'Custom Figma design',
-      'Lightning-fast Webflow development',
-      'Basic SEO setup',
-      'Delivered in 2-3 weeks',
+      'White-label delivery support',
+      'Webflow and Next.js builds',
+      'Async communication and staging links',
+      'Delivered on agency timelines',
     ],
   },
   {
-    name: 'Custom MVP',
+    name: 'Startup Launch Offer',
     price: 'Starting at $8,000',
     description:
-      'Powerful, scalable web applications for startups ready to launch their product.',
+      'Fast design and development for founders who need a credible site or MVP frontend.',
     features: [
-      'Complex frontend UI/UX',
-      'Next.js & React development',
-      'API & Database integration',
-      'Delivered in 4-8 weeks',
+      'Positioning and interface design',
+      'Marketing site or product frontend',
+      'Modern stack with room to scale',
+      'Delivered in focused launch sprints',
     ],
   },
   {
-    name: 'Dedicated Partner',
-    price: '$2,500 / month',
+    name: 'Conversion Refresh Offer',
+    price: 'Starting at $2,500',
     description:
-      'Pause or cancel anytime. Get dedicated design and development support without hiring full-time.',
+      'Homepage and landing page redesigns focused on clarity, speed, and conversion.',
     features: [
-      'One active request at a time',
-      'Unlimited revisions',
-      'Figma, Webflow & Next.js tasks',
-      'Average 48-72 hour delivery',
+      'Messaging and layout cleanup',
+      'Faster, lighter page builds',
+      'Conversion-focused redesign decisions',
+      'Ideal for underperforming key pages',
     ],
   },
 ]
@@ -300,7 +297,7 @@ function Pricing() {
 
 export const metadata = createMetadata({
   description:
-    'We are a development studio working at the intersection of design and technology.',
+    'Outcome-focused web design and development for agency overflow, startup launches, and conversion-focused redesigns.',
   path: '/',
 })
 
@@ -310,13 +307,15 @@ export default async function Home() {
       <Container className="mt-24 sm:mt-32 md:mt-56">
         <FadeIn className="max-w-3xl">
           <h1 className="font-display text-5xl font-medium tracking-tight text-balance text-neutral-950 sm:text-7xl">
-            Beautifully crafted websites and powerful web apps.
+            Websites and product frontends that help people trust and buy.
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
-Welcome to Connor & Co. We partner with startups, agencies, and small businesses to design and build custom websites that look great and perform even better. Let's build something awesome together.
+            Connor &amp; Co. helps agencies deliver client work on time,
+            founders launch credible websites and MVP frontends faster, and
+            growing teams improve pages that are not converting well.
           </p>
           <div className="mt-8">
-            <Button href="/work">View our work</Button>
+            <Button href="/pricing">See the offers</Button>
           </div>
         </FadeIn>
       </Container>
@@ -329,9 +328,8 @@ Welcome to Connor & Co. We partner with startups, agencies, and small businesses
         className="mt-24 sm:mt-32 lg:mt-40"
         attribution="Connor — Founder & Lead Developer"
       >
-        A great website shouldn&apos;t just look beautiful; it needs to perform.
-        My goal with Connor &amp; Co. is to bridge the gap between stunning
-        design and scalable, high-speed code.
+        Clients do not buy a framework. They buy a site that looks credible,
+        launches on time, and performs well.
       </Testimonial>
 
       <Services />

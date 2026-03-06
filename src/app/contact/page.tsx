@@ -61,18 +61,18 @@ function ContactDetails() {
 export const metadata = createMetadata({
   title: 'Contact Us',
   description:
-    'Tell us about your project, timeline, and goals. We will get back to you within 24 hours to schedule an intro call.',
+    'Share whether you need agency overflow support, a startup launch, or a conversion-focused redesign. We will reply within 24 hours.',
   path: '/contact',
 })
 
 export default function Contact() {
   return (
     <RootLayout>
-      <PageIntro eyebrow="Contact us" title="Let’s build something awesome.">
+      <PageIntro eyebrow="Contact us" title="Tell me which offer fits your situation.">
         <p>
-          Tell us a little bit about your project, timeline, and what you are
-          looking to achieve. We&apos;ll get back to you within 24 hours to
-          schedule an intro call.
+          Tell me whether you need agency overflow support, a startup launch,
+          a conversion refresh, or ongoing help after launch. I&apos;ll reply
+          within 24 hours with the best next step.
         </p>
       </PageIntro>
 

@@ -8,14 +8,14 @@ import { createMetadata } from '@/lib/seo'
 
 const faqs = [
   {
-    question: "Why wouldn't I just hire a full-time developer?",
+    question: 'How do I know which offer is right for me?',
     answer:
-      'Good question! A senior full-stack developer can cost over $120,000+ per year, plus benefits, and you might not always have enough work to keep them busy. With our subscription model, you get premium development when you need it, and you can pause your plan when you don\'t.',
+      'If you are an agency that needs extra delivery capacity, the Agency Overflow Offer is the best fit. If you are a founder getting ready to launch, choose the Startup Launch Offer. If your site gets traffic but does not convert well, the Conversion Refresh Offer is usually the right place to start.',
   },
   {
-    question: 'How does the "Unlimited Requests" subscription work?',
+    question: 'Do I need a full redesign or just development support?',
     answer:
-      'Once subscribed, you can add as many design or development tasks to your queue as you want. We will work through them one by one, ensuring high-quality output for each task before moving on to the next.',
+      'Not always. Some teams need clearer messaging and better page structure more than they need more code. We scope the problem first so you are paying for the shortest path to the result.',
   },
   {
     question: 'Who will I actually be working with?',
@@ -23,9 +23,9 @@ const faqs = [
       "You'll work directly with me, Connor—the founder of Connor & Co. As a Computer Science student at Ohio State and an indie-founder, I treat your codebase with the exact same care and precision as I do my own custom projects. No outsourcing, no junior devs.",
   },
   {
-    question: 'What is your main tech stack?',
+    question: 'What does ongoing support look like after launch?',
     answer:
-      'We design exclusively in Figma. For marketing and standard business sites, we build in Webflow for its incredible speed and animation capabilities. For web apps and SaaS products, we engineer custom solutions using Next.js, React, and Tailwind CSS.',
+      'If you need ongoing help after the initial project, Ongoing Partner Support gives you a simple monthly option for updates, improvements, and overflow work. It works well for growing teams and follow-up work that does not justify a full-time hire.',
   },
 ]
 
@@ -62,7 +62,7 @@ const paymentStructure = [
 export const metadata = createMetadata({
   title: 'Services & Pricing',
   description:
-    'Premium development services with transparent pricing for Webflow websites, custom Next.js apps, and ongoing monthly support.',
+    'Clear offers and transparent pricing for agency overflow support, startup launches, conversion-focused redesigns, and ongoing development help.',
   path: '/pricing',
 })
 
@@ -71,12 +71,12 @@ export default function PricingPage() {
     <RootLayout>
       <PageIntro
         eyebrow="Services & Pricing"
-        title="Premium development. Transparent pricing."
+        title="Choose the offer that matches the problem."
       >
         <p>
-          Clear project thresholds, structured scope, and predictable delivery
-          for Webflow builds, custom Next.js products, and ongoing monthly
-          development support.
+          Clear starting points, clear scope, and predictable delivery for
+          agency overflow work, founder launches, homepage refreshes, and
+          ongoing support after launch.
         </p>
       </PageIntro>
 
@@ -86,7 +86,7 @@ export default function PricingPage() {
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <FadeIn className="rounded-3xl p-8 ring-1 ring-neutral-950/10">
             <h2 className="font-display text-2xl font-medium text-neutral-950">
-              Minimum Engagement Policy
+              Engagement Basics
             </h2>
             <ul className="mt-6 space-y-3 text-sm text-neutral-700">
               {minimumEngagementPolicy.map((item) => (
@@ -97,7 +97,7 @@ export default function PricingPage() {
 
           <FadeIn className="rounded-3xl p-8 ring-1 ring-neutral-950/10">
             <h2 className="font-display text-2xl font-medium text-neutral-950">
-              Add-On Services
+              Common Add-Ons
             </h2>
             <ul className="mt-6 space-y-3 text-sm text-neutral-700">
               {addOnServices.map((item) => (
@@ -129,16 +129,16 @@ export default function PricingPage() {
       <Container className="mt-24 sm:mt-32 lg:mt-40">
         <FadeIn className="rounded-4xl bg-neutral-950 px-8 py-16 sm:px-12 sm:py-20">
           <h2 className="font-display text-3xl font-medium tracking-tight text-balance text-white sm:text-4xl">
-            Are you an agency looking for a reliable dev partner?
+            Need overflow capacity without adding headcount?
           </h2>
           <p className="mt-6 max-w-3xl text-xl text-neutral-300">
-            We offer special white-label rates and asynchronous workflows for
-            creative agencies that need Webflow or Next.js execution. You
-            handle the client relationship; we handle the code.
+            The Agency Overflow Offer is for creative teams that need reliable
+            white-label Webflow or Next.js production. You manage the client.
+            I handle the build work.
           </p>
           <div className="mt-8">
             <Button href="/contact" invert>
-              Let&apos;s talk partnerships
+              Ask about overflow support
             </Button>
           </div>
         </FadeIn>
@@ -167,11 +167,11 @@ export default function PricingPage() {
       <Container className="mt-24 mb-24 sm:mt-32 sm:mb-32 lg:mt-40 lg:mb-40">
         <FadeIn className="rounded-4xl bg-neutral-950 px-8 py-16 text-center sm:px-12 sm:py-20">
           <h2 className="mx-auto max-w-4xl font-display text-4xl font-medium tracking-tight text-balance text-white sm:text-5xl">
-            Ready to turn your idea into a digital product?
+            Ready to pick the right offer and move?
           </h2>
           <div className="mt-8 flex justify-center">
             <Button href="/contact" invert>
-              Start a project
+              Start the conversation
             </Button>
           </div>
         </FadeIn>

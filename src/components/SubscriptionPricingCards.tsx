@@ -36,73 +36,70 @@ const billingOptions: Array<{
 
 const plans = [
   {
-    key: 'webflow-marketing-sites',
-    target: 'SMBs, early startups, and agencies',
+    key: 'agency-overflow-offer',
+    target: 'Creative agencies and studios with delivery pressure',
     price: 'Starting at $1,500',
-    title: 'Webflow Marketing Sites',
+    title: 'Agency Overflow Offer',
     description:
-      'Modern, conversion-focused marketing websites designed in Figma and built in Webflow.',
+      'White-label Webflow and Next.js production for agencies that need a reliable development partner.',
     includes: [
-      'Custom UI/UX design in Figma',
-      'Webflow development',
-      'Responsive optimization',
-      'Basic SEO configuration',
-      'CMS setup (if applicable)',
+      'White-label execution under your brand',
+      'Webflow builds and Next.js frontends',
+      'Clear communication and handoff',
+      'Staging links and dependable deadlines',
       'Typical range: $1,500 - $5,000+',
     ],
-    buttonLabel: 'Start a Sprint',
+    buttonLabel: 'Discuss agency support',
     buttonHref: '/contact',
   },
   {
-    key: 'custom-web-applications',
-    target: 'Startups, SaaS teams, and internal tools',
-    title: 'Custom Web Applications',
+    key: 'startup-launch-offer',
+    target: 'Founders who need credibility and speed without full-time hires',
+    title: 'Startup Launch Offer',
     price: 'Starting at $3,500',
     description:
-      'Scalable Next.js product builds for teams that need custom software beyond templates.',
+      'Fast design and development for founders who need a credible website or MVP frontend.',
     includes: [
-      'Product architecture planning',
-      'Custom UI/UX design',
-      'Next.js frontend development',
-      'Authentication integration',
-      'Database setup (Supabase / similar)',
-      'API integrations',
+      'Messaging and interface design',
+      'Marketing site or MVP frontend build',
+      'Next.js development with room to scale',
+      'Integrations needed for launch',
       'Typical range: $3,500 - $12,000+',
     ],
-    buttonLabel: 'Discuss your app',
+    buttonLabel: 'Plan your launch',
     buttonHref: '/contact',
   },
   {
-    key: 'redesign-projects',
-    target: 'Teams improving underperforming sites and apps',
+    key: 'conversion-refresh-offer',
+    target: 'Teams fixing underperforming homepages and landing pages',
     price: 'Starting at $2,000',
-    title: 'Redesign Projects',
+    title: 'Conversion Refresh Offer',
     description:
-      'Strategic visual and UX overhauls to improve clarity, trust, and conversion performance.',
+      'Homepage and landing page redesigns focused on clarity, speed, and conversion.',
     includes: [
-      'UX audit',
-      'Design refresh',
-      'Conversion improvements',
-      'Performance improvements',
+      'Messaging and UX audit',
+      'Design refresh for trust and clarity',
+      'Performance and page speed improvements',
+      'Design changes based on conversion goals',
     ],
-    buttonLabel: 'Plan a redesign',
+    buttonLabel: 'Refresh your page',
     buttonHref: '/contact',
   },
   {
-    key: 'development-subscription',
-    target: 'Ongoing iteration and support',
+    key: 'ongoing-partner-support',
+    target: 'Teams that want a steady follow-on partner after launch',
     price: 'Minimum $1,000 / month',
-    title: 'Development Subscription',
+    title: 'Ongoing Partner Support',
     description:
-      'Flexible monthly support with one active request at a time and an unlimited task queue.',
+      'Flexible monthly support for post-launch improvements, overflow work, and ongoing updates.',
     includes: [
       'Tier 1 — Core Support ($1,000/month)',
       'Tier 2 — Growth Partner ($2,000/month)',
-      'Webflow updates, bug fixes, and minor to larger feature work',
+      'Webflow updates, bug fixes, and feature work',
       '48-72 hour turnaround for small tasks',
       'Pause anytime with no long-term lock-in contracts',
     ],
-    buttonLabel: 'Subscribe',
+    buttonLabel: 'Ask about support',
     buttonHref: '/contact',
   },
 ]
@@ -153,7 +150,7 @@ export function SubscriptionPricingCards() {
                     {price}
                   </span>
                   {note && <p className="text-sm text-neutral-600">{note}</p>}
-                  <p className="mt-2 text-sm text-neutral-600">Target: {plan.target}</p>
+                  <p className="mt-2 text-sm text-neutral-600">Best fit: {plan.target}</p>
                   <p className="mt-4 text-base text-neutral-600">{plan.description}</p>
                 </header>
 

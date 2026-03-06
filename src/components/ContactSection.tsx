@@ -10,11 +10,16 @@ export function ContactSection() {
         <div className="mx-auto max-w-4xl">
           <div className="max-w-xl">
             <h2 className="font-display text-3xl font-medium text-balance text-white sm:text-4xl">
-              Ready to start building?
+              Need help launching, improving conversion, or handling overflow work?
             </h2>
+            <p className="mt-6 text-base text-neutral-300">
+              Tell me whether you need agency overflow support, a startup
+              launch, or a conversion refresh, and I&apos;ll recommend the best
+              place to start.
+            </p>
             <div className="mt-6 flex">
               <Button href="/contact" invert>
-                Let&apos;s chat
+                Tell me what you need
               </Button>
             </div>
             <div className="mt-10 border-t border-white/10 pt-10">
