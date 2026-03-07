@@ -20,14 +20,14 @@ export const MDXComponents = {
     return (
       <div
         className={clsx(
-          'group isolate my-10 overflow-hidden rounded-4xl bg-neutral-100 max-sm:-mx-6',
+          'group isolate my-10 overflow-hidden rounded-4xl bg-neutral-100',
           className,
         )}
       >
         <GrayscaleTransitionImage
           {...props}
           sizes="(min-width: 768px) 42rem, 100vw"
-          className="aspect-16/10 w-full object-cover"
+          className="h-auto w-full object-contain sm:aspect-16/10 sm:object-cover"
         />
       </div>
     )
