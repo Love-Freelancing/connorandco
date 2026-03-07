@@ -4,6 +4,10 @@ import Script from 'next/script'
 
 import { createSiteJsonLd, siteConfig } from '@/lib/seo'
 import '@/styles/tailwind.css'
+import { Geist } from "next/font/google";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const loveSans = localFont({
   src: [
@@ -106,7 +110,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html
       lang="en"
-      className={`${loveSans.variable} h-full bg-neutral-950 text-base antialiased`}
+      className={cn("h-full", "bg-neutral-950", "text-base", "antialiased", loveSans.variable, "font-sans", geist.variable)}
     >
       <body className="flex min-h-full flex-col">
         <Script

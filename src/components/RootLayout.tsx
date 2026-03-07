@@ -20,28 +20,13 @@ import { GridPattern } from '@/components/GridPattern'
 import { Logo, Logomark } from '@/components/Logo'
 import { Offices } from '@/components/Offices'
 import { SocialMedia } from '@/components/SocialMedia'
+import { AnimateIcon } from '@/components/icons/icon'
+import { MenuIcon } from '@/components/icons/menu'
 
 const RootLayoutContext = createContext<{
   logoHovered: boolean
   setLogoHovered: React.Dispatch<React.SetStateAction<boolean>>
 } | null>(null)
-
-function XIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
-      <path d="m5.636 4.223 14.142 14.142-1.414 1.414L4.222 5.637z" />
-      <path d="M4.222 18.363 18.364 4.22l1.414 1.414L5.636 19.777z" />
-    </svg>
-  )
-}
-
-function MenuIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
-      <path d="M2 6h20v2H2zM2 16h20v2H2z" />
-    </svg>
-  )
-}
 
 function Header({
   panelId,
@@ -52,7 +37,7 @@ function Header({
   invert = false,
 }: {
   panelId: string
-  icon: React.ComponentType<{ className?: string }>
+  icon: React.ComponentType<{ className?: string; animate?: boolean }>
   expanded: boolean
   onToggle: () => void
   toggleRef: React.RefObject<HTMLButtonElement | null>
@@ -100,14 +85,29 @@ function Header({
               className={clsx(
                 'h-6 w-6',
                 invert
-                  ? 'fill-white group-hover:fill-neutral-200'
-                  : 'fill-neutral-950 group-hover:fill-neutral-700',
+                  ? 'fill-white text-white group-hover:fill-neutral-200 group-hover:text-neutral-200'
+                  : 'fill-neutral-950 text-neutral-950 group-hover:fill-neutral-700 group-hover:text-neutral-700',
               )}
+              animate={expanded}
             />
           </button>
         </div>
       </div>
     </Container>
+  )
+}
+
+function AnimatedMenuIcon({
+  className,
+  animate,
+}: {
+  className?: string
+  animate?: boolean
+}) {
+  return (
+    <AnimateIcon asChild animate={animate}>
+      <MenuIcon className={className} />
+    </AnimateIcon>
   )
 }
 
@@ -195,7 +195,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
         >
           <Header
             panelId={panelId}
-            icon={MenuIcon}
+            icon={AnimatedMenuIcon}
             toggleRef={openRef}
             expanded={expanded}
             onToggle={() => {
@@ -221,7 +221,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
               <Header
                 invert
                 panelId={panelId}
-                icon={XIcon}
+                icon={AnimatedMenuIcon}
                 toggleRef={closeRef}
                 expanded={expanded}
                 onToggle={() => {
